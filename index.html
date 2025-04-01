@@ -3,57 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon Go</title>
-    <link rel="stylesheet" href="./assets/style.css">
-    
+    <title>Pokémon GO Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="navigation">
-            <a href="./pages/Home/index.html" class="navigation-content">Home</a>
-            <a href="./pages/Events/index.html" class="navigation-content">Events</a>
-            <a href="./pages/News/index.html" class="navigation-content">News</a>
-            <a href="./pages/Store/index.html" class="navigation-content">Store</a>
-
-        </nav>
-    </header>
-
-    <body>
-
-        <img src="./assets/img/Pokemon wallapaper.jpg" alt="BG" class="BG">
-        <div class="container">
-            <div class="left-section">
-                Gotta catch 'em all!
+    <div class="container">
+        <div class="login-box">
+            <div class="logo">
+                <img src="pokemon-go-logo.png" alt="Pokémon GO Logo"> 
             </div>
-            <div class="right-section">
-                <h2>Log in</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" placeholder="Username">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Password">
-                    </div>
-                    <div class="form-group remember-forgot">
-                        <label><input type="checkbox" name="remember"> Remember Me</label>
-                        <a href="#">Forgot Password?</a>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit">Log in</button>
-                    </div>
-                    <div class="form-group or">
-                        - or -
-                    </div>
-                    <div class="form-group">
-                        <button type="button" class="signup">Sign up</button>
-                    </div>
-                </form>
+            <div class="form">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <button>Login</button>
             </div>
         </div>
-        <script src="./assets/script.js"></script>
-    </body>
-    
+    </div>
 </body>
 </html>

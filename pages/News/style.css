@@ -1,0 +1,148 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #111;
+    overflow: hidden;
+    /* background-image: url(../../assets/img/login-bg.png); */
+}
+
+.header {
+    background: linear-gradient(135deg, #e63946, #457b9d);
+    height: 20px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .logo {
+    padding-left: 25px;
+    height: 3.75rem;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .nav {
+    padding-right: 25px;
+    display: flex;
+    gap: 1.25rem;
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .nav a:hover,
+  .nav a.active {
+    color: #f9c74f;
+    transform: scale(1.05);
+  }
+
+.container {
+    /* display: flex; */
+    position: relative;
+    margin-top: 70px;
+    height: 70vh;
+    width: 60vw;
+    background-color: #bc1823;
+}
+.rocket-container {
+    /* outline: 1px solid yellow; */
+    background-image: url(./img/team-rocket-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45vh;
+    width: 30vw;
+    padding-left: 100px;
+    /* padding-top: 50px; */
+}
+
+.rocket-desc {
+    /* outline: 1px violet solid; */
+    position: absolute;
+    right: 0;
+    top: 25%;
+    text-align: center;
+    color: white;
+    font-style: canva-sans;
+    width: 340px;
+}
+
+.carousel-container {
+    /* outline: 1px solid green; */
+    margin-top: 10vh;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+}
+.carousel {
+    /* outline: 1px solid blue; */
+    width: 100%;
+    height: 100%;
+    margin-top: -30px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+.card {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(0deg);
+    /* background: gray; */
+    border-radius: 10px;
+    filter: blur(3px) brightness(30%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.highlight:hover {
+    scale: 1.05;
+}
+
+.card img {
+    width: 135px;
+    height: 300px;
+    object-fit: fill;
+    border-radius: 10px;
+}
+.highlight {
+    transform: scale(1.2);
+    filter: blur(0) brightness(100%) drop-shadow(1px 1px 8px white);
+}
+.controls {
+    /* outline: 1px orange solid; */
+    display: flex;
+    justify-content: center;
+}
+.arrow {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin: 0 20px;
+}
