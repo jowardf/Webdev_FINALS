@@ -3,47 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon GO Item Boxes</title>
-    <link rel="stylesheet" href="./style.css"> 
+    <title>Team Rocket Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../assets/header.css">
+    <link rel="stylesheet" href="../../assets/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div lascs="container">
-        <div class="hero">
-            <h1>Power Up Ticket Ultra Ticket Box</h1>
-            <p>Get ready for adventure!</p>
-            <div class="slider">
-                <div class="active"></div>
-                <div></div>
-                <div></div>
+    <header class="header">
+        <div class="logo-container">
+            <img src="../../assets/img/poke-go-logo.png" alt="Pokémon GO Logo" class="logo">
+        </div>
+        <nav class="nav">
+            <a href="../Home/index.html">Home</a>
+            <a href="../Events/index.html">Missions</a>
+            <a href="../News/index.html">News</a>
+            <a href="../Store/index.html" class="active">Store</a>
+            <a href="../Profile/index.html">Profile</a>
+        </nav>
+    </header>
+
+    <section class="store">
+        <h2>Team Rocket Store</h2>
+
+        <div class="featured-item">
+            <div class="featured-item-carousel">
+                <img src="./img/featured-1.png" alt="Featured Item 1" class="carousel-image">
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev-btn" onclick="prevImage()">❮</button>
+                    <button class="carousel-btn next-btn" onclick="nextImage()">❯</button>
+                </div>
+            </div>
+            <div class="featured-item-details">
+                <span class="one-time-only">ONE TIME ONLY</span>
+                <h3>Power Up Ticket Ultra Ticket Box</h3>
+                <div class="item-icons">
+                    <img src="./img/icon.png" alt="Icon 1">
+                    <img src="./img/icon.png" alt="Icon 2">
+                    <img src="./img/icon.png" alt="Icon 3">
+                </div>
+                <p>Can only be purchased 1 time.</p>
+                <p class="price">₱289.00</p>
+                <button class="cart-btn" onclick="addToCart('Power Up Ticket Ultra Ticket Box', 'featured-item-1.png', 289.00)">Purchase</button>
+                <div id="cart-notification" class="cart-notification"></div>
             </div>
         </div>
 
-        <div class="item-boxes">
-            <div class="item-box">
-                <span class="price">₱59.00</span>
-                <img src="stunning-styles-box.png" alt="Stunning Styles Ultra Ticket Box">
-                <h2>Stunning Styles Ultra Ticket Box</h2>
-                <p>Unlock new styles for your avatar.</p>
+        <div class="store-category">
+            <h3>Potions</h3>
+            <div class="store-items">
+                <div class="store-item">
+                    <img src="./img/super-incu.png" alt="Super Incubator" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>Super Incubator</h3>
+                        <button class="cart-btn" onclick="addToCart('Super Incubator', 'item7.png', 9.99)">Purchase</button>
+                    </div>
                 </div>
-            <div class="item-box">
-                <span class="price">₱289.00</span>
-                <img src="power-up-ticket-box.png" alt="Power Up Ticket Ultra Ticket Box">
-                <h2>Power Up Ticket Ultra Ticket Box</h2>
-                <p>Power up your Pokémon with this box.</p>
+                <div class="store-item">
+                    <img src="./img/incu.png" alt="Egg Incubator" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>Egg Incubator</h3>
+                        <button class="cart-btn" onclick="addToCart('Egg Incubator', 'item8.png', 7.99)">Purchase</button>
+                    </div>
                 </div>
-            <div class="item-box">
-                <span class="price">₱289.00</span>
-                <img src="max-mushroom.png" alt="Max Mushroom x3">
-                <h2>Max Mushroom x3</h2>
-                <p>Heal your Pokémon with Max Mushrooms.</p>
+                <div class="store-item">
+                    <img src="./img/revive.png" alt="Max Revive" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>Max Revive</h3>
+                        <button class="cart-btn" onclick="addToCart('Max Revive', 'item9.png', 5.99)">Purchase</button>
+                    </div>
                 </div>
-            <div class="item-box">
-                <span class="price">₱88.00</span>
-                <img src="premium-battle-pass.png" alt="Premium Battle Pass x3">
-                <h2>Premium Battle Pass x3</h2>
-                <p>Join Premium Battles with these passes.</p>
+                 <div class="store-item">
+                    <img src="./img/bp.png" alt="Premium Battle Pass" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>Premium Battle Pass</h3>
+                        <button class="cart-btn" onclick="addToCart('Premium Battle Pass', 'item10.png', 11.99)">Purchase</button>
+                    </div>
                 </div>
+                 <div class="store-item">
+                    <img src="./img/mossy.png" alt="Mossy Module" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>Mossy Module</h3>
+                        <button class="cart-btn" onclick="addToCart('Mossy Module', 'item11.png', 8.99)">Purchase</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <img src="./img/glacial.png" alt="Glacial Module" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>Glacial Module</h3>
+                        <button class="cart-btn" onclick="addToCart('Glacial Module', 'item12.png', 8.99)">Purchase</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                     <img src="./img/mystery-box.png" alt="Mystery Box" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>Mystery Box</h3>
+                        <button class="cart-btn" onclick="addToCart('Mystery Box', 'item19.png', 14.99)">Purchase</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <div class="store-category">
+            <h3>PokeCoins</h3>
+            <div class="store-items">
+                <div class="store-item">
+                    <img src="./img/coin-0.png" alt="100 PokeCoins" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>100.00 PokeCoins</h3>
+                        <button class="cart-btn" onclick="addToCart('100 PokeCoins', 'item13.png', 0.99)">Purchase</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <img src="./img/coin-1.png" alt="550 PokeCoins" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>550.00 PokeCoins</h3>
+                        <button class="cart-btn" onclick="addToCart('550 PokeCoins', 'item14.png', 4.99)">Purchase</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <img src="./img/coin-2.png" alt="1200 PokeCoins" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>1,200.00 PokeCoins</h3>
+                        <button class="cart-btn" onclick="addToCart('1200 PokeCoins', 'item15.png', 9.99)">Purchase</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <img src="./img/coin-3.png" alt="2500 PokeCoins" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>2,500.00 PokeCoins</h3>
+                        <button class="cart-btn" onclick="addToCart('2500 PokeCoins', 'item16.png', 19.99)">Purchase</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <img src="./img/coin-4.png" alt="5200 PokeCoins" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>5,200 PokeCoins</h3>
+                        <button class="cart-btn" onclick="addToCart('5200 PokeCoins', 'item17.png', 39.99)">Purchase</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <img src="./img/coin-5.png" alt="14500 PokeCoins" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>14,500.00 PokeCoins</h3>
+                        <button class="cart-btn" onclick="addToCart('14500 PokeCoins', 'item18.png', 99.99)">Purchase</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <img src="./img/coin-6.png" alt="Power Up Ticket Ultra Ticket Box" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>Power Up Ticket Ultra Ticket Box</h3>
+                        <button class="cart-btn" onclick="addToCart('Power Up Ticket Ultra Ticket Box', 'item1.png', 19.99)">Purchase</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="store-category">
+            <h3>Limited Edition Bundles</h3>
+            <div class="store-items">
+                <div class="store-item">
+                    <img src="./img/bundle-1.png" alt="3 Item Bundle" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>3 Item Bundle</h3>
+                        <button class="cart-btn" onclick="addToCart('3 Item Bundle', 'item20.png', 19.99)">Purchase</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <img src="./img/bundle-2.png" alt="5 Item Bundle" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>5 Item Bundle</h3>
+                        <button class="cart-btn" onclick="addToCart('5 Item Bundle', 'item21.png', 29.99)">Purchase</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                     <img src="./img/blazing.png" alt="Blazing Styles Ultra Ticket Box" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>Blazing Styles Ultra Ticket Box</h3>
+                        <button class="cart-btn" onclick="addToCart('Blazing Styles Ultra Ticket Box', 'item2.png', 14.99)">Purchase</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <img src="./img/mega.png" alt="Mega Raid Day Ultra Ticket Box" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>Mega Raid Day Ultra Ticket Box</h3>
+                        <button class="cart-btn" onclick="addToCart('Mega Raid Day Ultra Ticket Box', 'item3.png', 16.99)">Purchase</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <img src="./img/ultra.png" alt="Ultra Ball Box" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>Ultra Ball Box</h3>
+                        <button class="cart-btn" onclick="addToCart('Ultra Ball Box', 'item4.png', 12.99)">Purchase</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <img src="./img/mighty.png" alt="High and Mightcy Box" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>High and Mighty Box</h3>
+                        <button class="cart-btn" onclick="addToCart('High and Mighty Box', 'item5.png', 18.99)">Purchase</button>
+                    </div>
+                </div>
+                <div class="store-item">
+                    <img src="./img/global.png" alt="Pokémon GO Fest 2025: Global Bundle" class="store-item-img">
+                    <div class="store-item-info">
+                        <h3>Pokémon GO Fest 2o25: Global Bundle</h3>
+                        <button class="cart-btn" onclick="addToCart('Pokémon GO Fest 2020: Global Bundle', 'item6.png', 24.99)">Purchase</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-logos">
+            <img src="../../assets/img/group-logo.png" alt="Pokémon GO Logo">
+            <img src="../../assets/img/niantic.png" alt="Niantic Logo" class="niantic">
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>© 2025 Team Rocket. All Rights Reserved.</p>
+        <p class="disclaimer">No copyright intended. For educational purposes only.</p>
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>

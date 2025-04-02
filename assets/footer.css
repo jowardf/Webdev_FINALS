@@ -1,0 +1,43 @@
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #1e88e5;
+    color: white;
+    font-size: 0.8rem;
+    box-shadow: 0 -0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .footer-logos {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .footer-logos img {
+    height: 3rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .footer-logos img:hover {
+    transform: scale(1.05);
+  }
+  
+  .social-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #bbdefb;
+  }
+  
+  .disclaimer {
+    font-size: 0.7rem;
+    color: #a0a0a0;
+  }
